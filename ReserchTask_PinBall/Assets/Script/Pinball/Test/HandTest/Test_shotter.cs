@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Stage;
 public class Test_shotter : MonoBehaviour
 {
     [SerializeField] Shotter _shotter;

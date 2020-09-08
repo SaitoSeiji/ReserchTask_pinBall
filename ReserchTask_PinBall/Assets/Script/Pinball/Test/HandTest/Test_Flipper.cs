@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Stage;
 public class Test_Flipper : MonoBehaviour
 {
     [SerializeField] Flipper _flipper;
