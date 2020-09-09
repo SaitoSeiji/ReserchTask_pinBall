@@ -26,7 +26,7 @@ public class BallController : SingletonMonoBehaviour<BallController>
 {
 
     [SerializeField] GameObject _ballPrefab;
-    [SerializeField] float _ballStartHeight;
+    [SerializeField] Transform _ballStartHeight;
     [SerializeField] float _ballDeadHeight;
 
     [SerializeField,Space(20)] List<Transform> _ballTrList = new List<Transform>();//確認用
@@ -89,7 +89,8 @@ public class BallController : SingletonMonoBehaviour<BallController>
     //ボールがスタートエリアにいるかどうかの判定をするもの
     bool IsInStartArea(Transform tr)
     {
-        return tr.position.y < _ballStartHeight;
+        return tr.position.y < _ballStartHeight.position.y&&
+               tr.position.x>_ballStartHeight.position.x;
     }
     //ボールが死んだかどうかの判定をするもの
     bool IsBallDead(Transform checkTr)
